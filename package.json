@@ -1,6 +1,6 @@
 {
-  "name": "@cohan/bip32",
-  "version": "0.1.0",
+  "name": "bip32-esm",
+  "version": "0.1.1",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "typings": "dist/index.d.ts",
@@ -21,13 +21,13 @@
     "wif": "2.0.6"
   },
   "devDependencies": {
-    "@types/bs58check": "^2.1.0",
+    "@types/bs58check": "2.1.0",
     "@types/node": "18.11.9",
-    "@types/tiny-secp256k1": "^2.0.1",
-    "@types/wif": "^2.0.2",
+    "@types/tiny-secp256k1": "2.0.1",
+    "@types/wif": "2.0.2",
     "esbuild": "0.15.14",
     "nyc": "15.0.0",
-    "rollup": "^3.3.0",
+    "rollup": "3.3.0",
     "rollup-plugin-dts": "5.0.0",
     "rollup-plugin-esbuild": "5.0.0",
     "tape": "4.13.2",

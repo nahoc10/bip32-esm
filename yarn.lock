@@ -264,7 +264,7 @@
     estree-walker "^2.0.2"
     picomatch "^2.3.1"
 
-"@types/bs58check@^2.1.0":
+"@types/bs58check@2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@types/bs58check/-/bs58check-2.1.0.tgz#7d25a8b88fe7a9e315d2647335ee3c43c8fdb0c0"
   integrity sha512-OxsysnJQh82vy9DRbOcw9m2j/WiyqZLn0YBhKxdQ+aCwoHj+tWzyCgpwAkr79IfDXZKxc6h7k89T9pwS78CqTQ==
@@ -281,14 +281,14 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
   integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
 
-"@types/tiny-secp256k1@^2.0.1":
+"@types/tiny-secp256k1@2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/tiny-secp256k1/-/tiny-secp256k1-2.0.1.tgz#a2a1a1e8f377ac63419464c6ce05b8bec109c39c"
   integrity sha512-3UmSOVZR8nqCk50r/ODnT58+FutNzf1NpJHSW69Lc33ZDvOVciKHYOcBN/BXPzYWzWvM0GvHVnxv6HNHxOKXbg==
   dependencies:
     tiny-secp256k1 "*"
 
-"@types/wif@^2.0.2":
+"@types/wif@2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@types/wif/-/wif-2.0.2.tgz#5bd845e29406bc7d49acca6d2a6c3230f3b53d3c"
   integrity sha512-IiIuBeJzlh4LWJ7kVTrX0nwB60OG0vvGTaWC/SgSbVFw7uYUTF6gEuvDZ1goWkeirekJDD58Y8g7NljQh2fNkA==
@@ -1593,7 +1593,7 @@ rollup-plugin-esbuild@5.0.0:
     joycon "^3.1.1"
     jsonc-parser "^3.2.0"
 
-rollup@^3.3.0:
+rollup@3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-3.3.0.tgz#ae8dc84808a9c75d775d8b2ed8db1adada31a581"
   integrity sha512-wqOV/vUJCYEbWsXvwCkgGWvgaEnsbn4jxBQWKpN816CqsmCimDmCNJI83c6if7QVD4v/zlyRzxN7U2yDT5rfoA==

@@ -4,7 +4,31 @@ import {hash160, hmacSHA512} from "./crypto"
 import {encode, decode} from 'bs58check'
 import {pointFromScalar,isPrivate,isPoint,privateAdd, sign, signWithEntropy, verify} from 'tiny-secp256k1'
 import typeforce from 'typeforce'
-import {encode as wifEncode} from 'wif'
+
+function wifEncodeRaw (version, privateKey, compressed) {
+    var result = new Buffer(compressed ? 34 : 33)
+  
+    result.writeUInt8(version, 0)
+    privateKey.copy(result, 1)
+  
+    if (compressed) {
+      result[33] = 0x01
+    }
+  
+    return result
+  }
+
+function wifEncode (version, privateKey, compressed) {
+    if (typeof version === 'number') return encode(wifEncodeRaw(version, privateKey, compressed))
+  
+    return bs58check.encode(
+      encodeRaw(
+        version.version,
+        version.privateKey,
+        version.compressed
+      )
+    )
+  }
 
 const UINT256_TYPE = typeforce.BufferN(32);
 const NETWORK_TYPE = typeforce.compile({
