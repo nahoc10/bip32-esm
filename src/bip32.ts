@@ -1,8 +1,8 @@
 import * as crypto from './crypto';
 import { testEcc } from './testecc';
-const bs58check = require('bs58check');
-const typeforce = require('typeforce');
-const wif = require('wif');
+import {encode as b58encode, decode} from 'bs58check'
+import typeforce from 'typeforce'
+import {encode} from 'wif'
 
 interface Network {
   wif: number;
@@ -274,12 +274,12 @@ export function BIP32Factory(ecc: TinySecp256k1Interface): BIP32API {
         this.publicKey.copy(buffer, 45);
       }
 
-      return bs58check.encode(buffer);
+      return b58encode(buffer);
     }
 
     toWIF(): string {
       if (!this.privateKey) throw new TypeError('Missing private key');
-      return wif.encode(this.network.wif, this.privateKey, true);
+      return encode(this.network.wif, this.privateKey, true);
     }
 
     // https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki#child-key-derivation-ckd-functions
@@ -424,7 +424,7 @@ export function BIP32Factory(ecc: TinySecp256k1Interface): BIP32API {
   }
 
   function fromBase58(inString: string, network?: Network): BIP32Interface {
-    const buffer = bs58check.decode(inString);
+    const buffer = decode(inString);
     if (buffer.length !== 78) throw new TypeError('Invalid buffer length');
     network = network || BITCOIN;
 

@@ -20,7 +20,10 @@ const config = [
     external: [
       'ripemd160',
       'create-hash',
-      'create-hmac'
+      'create-hmac',
+      'bs58check',
+      'typeforce',
+      'wif',
     ],
   },
   {

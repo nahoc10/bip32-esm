@@ -1,7 +1,7 @@
 {
-  "name": "bip32",
-  "version": "3.1.0",
-  "description": "A BIP32 compatible library",
+  "name": "@cohan/nbip32",
+  "version": "0.1.0",
+  "description": "An ESM-friendly port of BIP32",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "typings": "dist/index.d.ts",
@@ -14,16 +14,18 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "bs58check": "2.1.1",
+    "bs58check": "^2.1.2",
     "create-hash": "1.2.0",
     "create-hmac": "1.1.7",
     "ripemd160": "2.0.2",
-    "typeforce": "1.11.5",
-    "wif": "2.0.6"
+    "typeforce": "^1.18.0",
+    "wif": "^2.0.6"
   },
   "devDependencies": {
+    "@types/bs58check": "^2.1.0",
     "@types/node": "10.12.18",
     "@types/ripemd160": "2.0.0",
+    "@types/wif": "^2.0.2",
     "esbuild": "^0.15.14",
     "nyc": "15.0.0",
     "prettier": "1.16.4",
