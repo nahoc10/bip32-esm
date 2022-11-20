@@ -2,7 +2,7 @@
 
 import {hash160, hmacSHA512} from "./crypto"
 import {encode, decode} from 'bs58check'
-import {pointFromScalar,isPrivate,isPoint,privateAdd, sign, signWithEntropy, verify} from 'tiny-secp256k1'
+import {pointFromScalar,isPrivate,isPoint,privateAdd, sign, signWithEntropy, verify} from '@noble/secp256k1'
 import typeforce from 'typeforce'
 
 function wifEncodeRaw (version, privateKey, compressed) {
@@ -240,7 +240,7 @@ class BIP32 {
     }
 }
 
-export function fromBase58(inString: any, network: any) {
+export function fromBase58(inString: any, network?: any) {
     const buffer = decode(inString);
     if (buffer.length !== 78)
         throw new TypeError('Invalid buffer length');

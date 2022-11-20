@@ -19,11 +19,10 @@ const sharedRollupConfig = [
     ],
     external: [
       'bs58check',
-      'tiny-secp256k1',
       'typeforce',
-      'wif',
       'create-hash',
-      'create-hmac'
+      'create-hmac',
+      '@noble/secp256k1'
     ],
   },
   {
