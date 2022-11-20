@@ -1,1 +1,1 @@
-declare module 'typeforce';
+declare module 'typeforce'

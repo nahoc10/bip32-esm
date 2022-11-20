@@ -1,35 +1,35 @@
 {
   "compilerOptions": {
-    "allowJs": false,
-    "alwaysStrict": true,
-    "declaration": true,
-    "declarationDir": "src/types",
-    "esModuleInterop": false,
-    "lib": [
-      "ESNext"
-    ],
-    "module": "ESNext",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "moduleResolution": "Node",
-    "outDir": "./src",
+    "baseUrl": "src",
     "rootDir": "src",
-    "strict": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
     "target": "ESNext",
-    "types": [
-      "node"
-    ]
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true,
+    "declarationDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "jsx": "react-jsx"
   },
-  "include": [
-      "src/*.ts"
-  ],
+  "include": ["./src"],
   "exclude": [
-      "**/*.spec.ts",
-      "test/**/*",
-      "node_modules/**/*"
+    "dist",
+    "esm",
+    "__mocks__",
+    "__tests__",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.test.jsx",
+    "src/**/*.test.js"
   ]
 }

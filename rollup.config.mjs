@@ -2,7 +2,7 @@ import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
 
 // Always provide both CJS and ES exports
-const config = [
+const sharedRollupConfig = [
   {
     input: `src/index.ts`,
     plugins: [esbuild()],
@@ -18,12 +18,12 @@ const config = [
       },
     ],
     external: [
-      'ripemd160',
-      'create-hash',
-      'create-hmac',
       'bs58check',
+      'tiny-secp256k1',
       'typeforce',
       'wif',
+      'create-hash',
+      'create-hmac'
     ],
   },
   {
@@ -43,4 +43,4 @@ const config = [
   },
 ];
 
-export default config;
+export default sharedRollupConfig;

@@ -1,6 +1,5 @@
-node_modules
-.nyc_output
-coverage
 .dccache
+node_modules
+.DS_Store
 dist
 esm
