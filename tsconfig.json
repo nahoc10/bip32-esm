@@ -3,31 +3,32 @@
     "allowJs": false,
     "alwaysStrict": true,
     "declaration": true,
-    "declarationDir": "./types",
+    "declarationDir": "src/types",
     "esModuleInterop": false,
     "lib": [
-      "es2017"
+      "ESNext"
     ],
-    "module": "commonjs",
+    "module": "ESNext",
     "noImplicitAny": true,
     "noImplicitThis": true,
     "outDir": "./src",
-    "rootDir": "./ts-src",
+    "rootDir": "src",
     "strict": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "es2017",
+    "target": "ESNext",
     "types": [
       "node"
     ]
   },
   "include": [
-      "ts-src/*.ts"
+      "src/*.ts"
   ],
   "exclude": [
       "**/*.spec.ts",
+      "test/**/*",
       "node_modules/**/*"
   ]
 }

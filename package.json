@@ -2,57 +2,37 @@
   "name": "bip32",
   "version": "3.1.0",
   "description": "A BIP32 compatible library",
-  "keywords": [
-    "bip32",
-    "bitcoinjs",
-    "bitcoin",
-    "secp256k1"
-  ],
-  "main": "./src/index.js",
-  "types": "./types/index.d.ts",
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "scripts": {
-    "build": "tsc -p ./tsconfig.json",
-    "coverage-report": "npm run build && npm run nobuild:coverage-report",
-    "coverage": "npm run build && npm run nobuild:coverage",
-    "format": "npm run prettier -- --write",
-    "format:ci": "npm run prettier -- --check",
-    "gitdiff:ci": "npm run build && git diff --exit-code",
-    "lint": "tslint -p tsconfig.json -c tslint.json",
-    "nobuild:coverage-report": "nyc report --reporter=lcov",
-    "nobuild:coverage": "nyc --check-coverage --branches 90 --functions 90 npm run nobuild:unit",
-    "nobuild:unit": "tape test/*.js",
-    "prettier": "prettier 'ts-src/**/*.ts' --ignore-path ./.prettierignore",
-    "test": "npm run build && npm run format:ci && npm run lint && npm run nobuild:coverage",
-    "unit": "npm run build && npm run nobuild:unit"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bitcoinjs/bip32.git"
-  },
+  "main": "dist/index.js",
+  "module": "esm/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
-    "src",
-    "types"
+    "dist",
+    "esm"
   ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c"
+  },
   "dependencies": {
-    "bs58check": "^2.1.1",
-    "create-hash": "^1.2.0",
-    "create-hmac": "^1.1.7",
-    "ripemd160": "^2.0.2",
-    "typeforce": "^1.11.5",
-    "wif": "^2.0.6"
+    "bs58check": "2.1.1",
+    "create-hash": "1.2.0",
+    "create-hmac": "1.1.7",
+    "ripemd160": "2.0.2",
+    "typeforce": "1.11.5",
+    "wif": "2.0.6"
   },
   "devDependencies": {
     "@types/node": "10.12.18",
-    "@types/ripemd160": "^2.0.0",
-    "nyc": "^15.0.0",
+    "@types/ripemd160": "2.0.0",
+    "esbuild": "^0.15.14",
+    "nyc": "15.0.0",
     "prettier": "1.16.4",
-    "tape": "^4.13.2",
-    "tiny-secp256k1": "^2.2.1",
-    "tslint": "^6.1.0",
-    "typescript": "3.3.3333"
+    "rollup": "3.3.0",
+    "rollup-plugin-dts": "5.0.0",
+    "rollup-plugin-esbuild": "5.0.0",
+    "tape": "4.13.2",
+    "tiny-secp256k1": "2.2.1",
+    "typescript": "4.9.3"
   },
   "author": "Daniel Cousens",
   "license": "MIT",
