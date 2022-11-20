@@ -1,6 +1,6 @@
 {
   "name": "bip32-esm",
-  "version": "0.1.1",
+  "version": "0.1.6",
   "main": "dist/index.js",
   "module": "esm/index.js",
   "typings": "dist/index.d.ts",
@@ -10,7 +10,8 @@
   ],
   "sideEffects": false,
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prettier": "prettier --write ./"
   },
   "dependencies": {
     "@noble/secp256k1": "1.7.0",
@@ -21,8 +22,11 @@
   },
   "devDependencies": {
     "@types/bs58check": "2.1.0",
+    "@types/create-hash": "1.2.2",
+    "@types/create-hmac": "1.1.0",
     "@types/node": "18.11.9",
     "esbuild": "0.15.14",
+    "prettier": "2.7.1",
     "rollup": "3.3.0",
     "rollup-plugin-dts": "5.0.0",
     "rollup-plugin-esbuild": "5.0.0",

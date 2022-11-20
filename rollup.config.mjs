@@ -22,7 +22,7 @@ const sharedRollupConfig = [
       'typeforce',
       'create-hash',
       'create-hmac',
-      '@noble/secp256k1'
+      '@noble/secp256k1',
     ],
   },
   {
